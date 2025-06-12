@@ -1,4 +1,4 @@
-﻿namespace MauiSentryTest.ViewModels
+﻿namespace MauiSentryTest.App.ViewModels
 {
     /// <summary>
     /// Blank interface for all ViewModels to implement, to be automatically registered with the

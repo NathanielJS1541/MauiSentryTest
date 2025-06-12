@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MauiSentryTest
+namespace MauiSentryTest.App
 {
     [Application]
     public class MainApplication : MauiApplication

@@ -1,6 +1,6 @@
-﻿using MauiSentryTest.ViewModels;
+﻿using MauiSentryTest.App.ViewModels;
 
-namespace MauiSentryTest.Views
+namespace MauiSentryTest.App.Views
 {
     public partial class HomePage : ContentPage
     {

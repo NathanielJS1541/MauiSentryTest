@@ -1,6 +1,6 @@
 ﻿using MauiSentryTest.Common.Services;
 
-namespace MauiSentryTest.Services
+namespace MauiSentryTest.App.Services
 {
     /// <summary>
     /// Example service within the app project itself.

@@ -1,7 +1,8 @@
-﻿using MauiSentryTest.Common.Services;
-using MauiSentryTest.ViewModels;
+﻿using MauiSentryTest.App.ViewModels;
+using MauiSentryTest.Common.Services;
+using Microsoft.Extensions.Logging;
 
-namespace MauiSentryTest
+namespace MauiSentryTest.App
 {
     public static class MauiProgram
     {

@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using MauiSentryTest.App.Services;
 using MauiSentryTest.Common.Services;
-using MauiSentryTest.Services;
 
-namespace MauiSentryTest.ViewModels
+namespace MauiSentryTest.App.ViewModels
 {
     public class HomePageViewModel : IViewModel
     {

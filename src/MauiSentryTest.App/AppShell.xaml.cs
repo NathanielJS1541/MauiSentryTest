@@ -1,4 +1,4 @@
-﻿namespace MauiSentryTest
+﻿namespace MauiSentryTest.App
 {
     public partial class AppShell : Shell
     {
