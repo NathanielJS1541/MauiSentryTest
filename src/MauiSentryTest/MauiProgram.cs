@@ -1,7 +1,5 @@
 ﻿using MauiSentryTest.Common.Services;
 using MauiSentryTest.ViewModels;
-using Microsoft.Extensions.Logging;
-using Sentry;
 
 namespace MauiSentryTest
 {
@@ -21,7 +19,7 @@ namespace MauiSentryTest
         {
             services.Scan(scan => scan
                 // Scan all dependencies for service implementations.
-                .FromApplicationDependencies()
+                .FromAssemblyDependencies(typeof(MauiProgram).Assembly)
 
                 // ------------------------------ Singleton Services ------------------------------
 
