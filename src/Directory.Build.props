@@ -1,0 +1,45 @@
+<Project>
+
+  <!-- General shared project settings. -->
+  <PropertyGroup>
+    <!-- Set the MauiVersion for all projects. -->
+    <MauiVersion>9.0.71</MauiVersion>
+
+    <!--
+    Ensure debug .pdb files are produced for every build configuration, as these will be uploaded
+    to Sentry to provide debugging and source context to user crashes.
+    -->
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+
+    <!--
+    Ensure the debug .pdb files always contain all source files. This is required to provide source
+    context to stack traces uploaded to the telemetry server.
+    -->
+    <EmbedAllSources>true</EmbedAllSources>
+  </PropertyGroup>
+
+  <!-- Sentry MSBuild Configuration. -->
+  <PropertyGroup>
+    <!-- Configure Sentry organisation and project slugs. -->
+    <SentryOrg>example-sentry-org</SentryOrg>
+    <SentryProject>maui-sentry-test</SentryProject>
+
+    <!--
+    Do not automatically create releases or associate commits. This should be done by the CI/CD
+    Pipeline only for deployed builds.
+    -->
+    <SentryCreateRelease>false</SentryCreateRelease>
+    <SentrySetCommits>false</SentrySetCommits>
+
+    <!--
+    Sends symbols to Sentry, enabling symbolication of stack traces. These files should also
+    contain embedded source files.
+    -->
+    <SentryUploadSymbols>true</SentryUploadSymbols>
+
+    <!-- If you are targeting Android, sends proguard mapping file to Sentry. -->
+    <SentryUploadAndroidProguardMapping>true</SentryUploadAndroidProguardMapping>
+  </PropertyGroup>
+
+</Project>

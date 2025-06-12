@@ -1,6 +1,7 @@
 ﻿using MauiSentryTest.Common.Services;
 using MauiSentryTest.ViewModels;
 using Microsoft.Extensions.Logging;
+using Sentry;
 
 namespace MauiSentryTest
 {
@@ -102,6 +103,27 @@ namespace MauiSentryTest
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSentry(options => {
+                    // TODO: Add your DSN here.
+                    options.Dsn = "";
+
+                    // Use debug mode if you want to see what the SDK is doing.
+                    // Debug messages are written to stdout with Console.Writeline,
+                    // and are viewable in your IDE's debug console or with 'adb logcat', etc.
+                    // This option is not recommended when deploying your application.
+                    options.Debug = true;
+
+                    // Application release and distribution.
+                    options.Release = $"maui-sentry-test@{AppInfo.VersionString}";
+                    options.Distribution = AppInfo.BuildString;
+
+                    // Set the environment based on build configuration.
+#if DEBUG
+                    options.Environment = "Development";
+#else
+                    options.Environment = "Production";
+#endif
+                })
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -125,8 +147,8 @@ namespace MauiSentryTest
             return builder.Build();
         }
 
-        #endregion
+#endregion
 
-        #endregion
+#endregion
     }
 }
