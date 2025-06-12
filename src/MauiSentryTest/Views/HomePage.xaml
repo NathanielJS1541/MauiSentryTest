@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MauiSentryTest.ViewModels"
+             x:Class="MauiSentryTest.Views.HomePage"
+             x:DataType="viewModels:HomePageViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0"
+                             Spacing="25">
+
+            <Label Text="Sentry unhandled exception tests."
+                   Style="{StaticResource Headline}" />
+
+            <Label Text="Click a button to cause an unhandled exception in different areas of the app."
+                   Style="{StaticResource SubHeadline}" />
+
+            <Button Text="ViewModel Exception"
+                    HorizontalOptions="Fill"
+                    Command="{Binding ViewModelCrashCommand}" />
+
+            <Button Text="InternalService Exception"
+                    HorizontalOptions="Fill"
+                    Command="{Binding InternalServiceCrashCommand}" />
+
+            <Button Text="CommonService Exception"
+                    HorizontalOptions="Fill"
+                    Command="{Binding CommonServiceCrashCommand}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

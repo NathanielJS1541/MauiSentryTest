@@ -3,12 +3,11 @@
     x:Class="MauiSentryTest.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiSentryTest"
+    xmlns:views="clr-namespace:MauiSentryTest.Views"
     Title="MauiSentryTest">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellContent Title="Home"
+                  ContentTemplate="{DataTemplate views:HomePage}"
+                  Route="HomePage" />
 
 </Shell>
