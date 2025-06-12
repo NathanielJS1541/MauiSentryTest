@@ -1,7 +1,6 @@
-﻿using ObjCRuntime;
-using UIKit;
+﻿using UIKit;
 
-namespace MauiSentryTest
+namespace MauiSentryTest.App
 {
     public class Program
     {
